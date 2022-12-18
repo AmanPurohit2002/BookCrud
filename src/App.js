@@ -23,10 +23,23 @@ const App=()=>{
         ]);
     }
 
+    const handleUpdateTitle=(title)=>{
+
+        const updateTitle=books.map((book)=>{
+            if(book.title===title){
+                return {...books,title:title}
+            }
+            return book;
+        })
+
+        setBooks(updateTitle);
+
+    }
+
     return (
         <div className="app">
             <BookCreate onCreate={handleCreateBook}/>
-            <BookList books={books}  onDeleteById={deleteBookById} />
+            <BookList books={books}  onDeleteById={deleteBookById} onTitleUpdate={handleUpdateTitle} />
         </div>
         
     )
