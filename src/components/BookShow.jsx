@@ -25,6 +25,7 @@ const BookShow=({book,onDeleteById,onTitleUpdate})=>{
 
     return (
         <div className="book-show">
+            <img  alt="images" src={`https://picsum.photos/seed/${book.id}/300/200`}/>
             <div>{content}</div>
             
             <div className="actions">
