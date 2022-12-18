@@ -15,7 +15,7 @@ const BookShow=({book,onDeleteById,onTitleUpdate})=>{
     let content=<h3>{book.title}</h3>;
 
     if(showEdit){
-        content=<BookEdit onTitleUpdate={onTitleUpdate} book={book}/>
+        content=<BookEdit key={book.id} onTitleUpdate={onTitleUpdate} book={book}/>
     }
 
     return (

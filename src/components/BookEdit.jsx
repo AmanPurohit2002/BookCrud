@@ -6,7 +6,7 @@ const BookEdit=({onTitleUpdate,book})=>{
     const handleSubmit=(e)=>{
         e.preventDefault();
 
-        onTitleUpdate(updateTitle);
+        onTitleUpdate(book.id,updateTitle);
 
         setUpdateTitle('');
 

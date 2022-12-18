@@ -23,10 +23,10 @@ const App=()=>{
         ]);
     }
 
-    const handleUpdateTitle=(title)=>{
+    const handleUpdateTitle=(id,title)=>{
 
         const updateTitle=books.map((book)=>{
-            if(book.title===title){
+            if(book.id===id){
                 return {...books,title:title}
             }
             return book;
