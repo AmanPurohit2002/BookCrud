@@ -12,10 +12,15 @@ const BookShow=({book,onDeleteById,onTitleUpdate})=>{
         setShowEdit(!showEdit);
     }
 
+    const handleSubmit=(id,updatedTitle)=>{
+        setShowEdit(false);
+        onTitleUpdate(id,updatedTitle);
+    }
+
     let content=<h3>{book.title}</h3>;
 
     if(showEdit){
-        content=<BookEdit key={book.id} onTitleUpdate={onTitleUpdate} book={book}/>
+        content=<BookEdit onSubmitted={handleSubmit} onTitleUpdate={onTitleUpdate} book={book}/>
     }
 
     return (
