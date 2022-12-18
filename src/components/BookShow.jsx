@@ -20,7 +20,7 @@ const BookShow=({book,onDeleteById,onTitleUpdate})=>{
     let content=<h3>{book.title}</h3>;
 
     if(showEdit){
-        content=<BookEdit onSubmitted={handleSubmit} onTitleUpdate={onTitleUpdate} book={book}/>
+        content=<BookEdit onSubmitted={handleSubmit} book={book}/>
     }
 
     return (
