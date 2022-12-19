@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/BookCrud/static/css/main.1f59ae86.css",
+    "main.js": "/BookCrud/static/js/main.e42614f1.js",
+    "index.html": "/BookCrud/index.html",
+    "main.1f59ae86.css.map": "/BookCrud/static/css/main.1f59ae86.css.map",
+    "main.e42614f1.js.map": "/BookCrud/static/js/main.e42614f1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1f59ae86.css",
+    "static/js/main.e42614f1.js"
+  ]
+}
