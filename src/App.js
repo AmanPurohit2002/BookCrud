@@ -1,23 +1,24 @@
 import BookCreate from "./components/BookCreate";
 import BookList from "./components/BookList";
-import { useState,useEffect } from "react";
-// import uuid from 'react-uuid';
+import { useState } from "react";
+import uuid from "react-uuid";
+
 
 const App=()=>{
 
     const[books,setBooks]=useState([]);
 
-    useEffect(()=>{
-        const fetchData=async()=>{
-            const response=await fetch("http://localhost:3001/books",{
-                method:'GET'
-            })
-            const json =await response.json();
-            setBooks(json);
+    // useEffect(()=>{
+    //     const fetchData=async()=>{
+    //         const response=await fetch("http://localhost:3001/books",{
+    //             method:'GET'
+    //         })
+    //         const json =await response.json();
+    //         setBooks(json);
     
-        }
-        fetchData();
-    },[books])
+    //     }
+    //     fetchData();
+    // },[books])
 
     const deleteBookById=(id)=>{
         const updateBooks=books.filter((book)=>(
@@ -28,21 +29,21 @@ const App=()=>{
     }
 
     const handleCreateBook= async(title)=>{
-            const response=await fetch("http://localhost:3001/books",{
-                method:'POST',
-                headers:{
-                    "content-Type": "application/json"
-                },
-                body:JSON.stringify({
-                    title:title
-                })
-            })
-            const json=await response.json();
-            console.log(json);
+            // const response=await fetch("http://localhost:3001/books",{
+            //     method:'POST',
+            //     headers:{
+            //         "content-Type": "application/json"
+            //     },
+            //     body:JSON.stringify({
+            //         title:title
+            //     })
+            // })
+            // const json=await response.json();
+            // console.log(json);
 
         setBooks([...books,
             // 
-            json
+            {id:uuid(),title:title}
         ]);
     }
 
