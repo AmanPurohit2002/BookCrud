@@ -18,8 +18,13 @@ const BookCreate=({onCreate})=>{
 
     const disable=title.length===0;
 
+    const myStyle={
+        zIndex:'1',
+        backgroundColor:'#996174'
+    }
+
     return (
-        <div className="book-create">
+        <div className="book-create" style={myStyle}>
         <h3>Add a Book</h3>
         <form onSubmit={handleSubmit}>
             <label>Title of the book</label>
